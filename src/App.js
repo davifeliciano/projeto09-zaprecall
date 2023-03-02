@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { createGlobalStyle } from "styled-components";
+import Content from "./components/Content";
 import StartScreen from "./components/StartScreen";
 
 const GlobalStyle = createGlobalStyle`
@@ -76,6 +77,7 @@ export default function App() {
     <>
       <GlobalStyle />
       <StartScreen started={started} setStarted={setStarted} />
+      <Content started={started} />
     </>
   );
 }
