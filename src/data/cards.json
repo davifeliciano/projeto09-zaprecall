@@ -1,0 +1,26 @@
+[
+  {
+    "frontContent": "O que é NodeJS?",
+    "backContent": "Node JS é um port da engine V8 que permite a execução de JavaScript fora do browser."
+  },
+  {
+    "frontContent": "O que é NPM?",
+    "backContent": "É uma sigla para Node Package Manager, um gerenciador de pacotes e dependências para o NodeJS."
+  },
+  {
+    "frontContent": "O que é React?",
+    "backContent": "React é um framework criado pelo Facebook para a implementação de interfaces de usuário."
+  },
+  {
+    "frontContent": "O que é JSX?",
+    "backContent": "É uma extensão de sintaxe utilizada pelo React que possibilita a inserção de HTML no próprio JavaScript."
+  },
+  {
+    "frontContent": "Estados no React são...",
+    "backContent": "propriedades atreladas a um componente. Ao mudá-las, o componente é atualizado."
+  },
+  {
+    "frontContent": "Componentes no React são...",
+    "backContent": "funções que representam partes isoladas ou reutilizáveis de uma SPA."
+  }
+]
