@@ -30,6 +30,10 @@ const GlobalStyle = createGlobalStyle`
     font: inherit;
   }
 
+  button:hover {
+    cursor: pointer;
+  }
+
   p,
   h1,
   h2,
@@ -68,6 +72,7 @@ const GlobalStyle = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     font-family: 'Recursive', sans-serif;
     background-color: #fb6b6b;
+    color: #333333;
   }
 `;
 

@@ -58,10 +58,6 @@ const StartButton = styled.button`
   color: #d70900;
   transition: filter 200ms ease;
 
-  &:hover {
-    cursor: pointer;
-  }
-
   &:active {
     filter: brightness(90%);
     transition: filter 200ms ease;
