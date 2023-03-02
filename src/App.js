@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { createGlobalStyle } from "styled-components";
+import StartScreen from "./components/StartScreen";
 
 const GlobalStyle = createGlobalStyle`
   *,
@@ -64,13 +66,16 @@ const GlobalStyle = createGlobalStyle`
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
     font-family: 'Recursive', sans-serif;
+    background-color: #fb6b6b;
   }
 `;
 
 export default function App() {
+  const [started, setStarted] = useState(false);
   return (
     <>
       <GlobalStyle />
+      <StartScreen started={started} setStarted={setStarted} />
     </>
   );
 }
