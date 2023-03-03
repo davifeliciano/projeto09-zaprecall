@@ -78,7 +78,9 @@ export default function StartScreen({ started, setStarted }) {
         <Logo />
       </LogoContainer>
       <Title>ZapRecall</Title>
-      <StartButton onClick={startRecall}>Iniciar Recall!</StartButton>
+      <StartButton onClick={startRecall} data-test="start-btn">
+        Iniciar Recall!
+      </StartButton>
     </Container>
   );
 }

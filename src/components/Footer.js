@@ -28,7 +28,7 @@ const StyledFooter = styled.footer`
 
 export default function Footer({ cardsStatuses, answeredCardsStatuses }) {
   return (
-    <StyledFooter>
+    <StyledFooter data-test="footer">
       <Result cardsStatuses={cardsStatuses} />
       <Progress
         cardsStatuses={cardsStatuses}

@@ -59,8 +59,8 @@ export default function FrontFaceContent({
   if (started) {
     return (
       <>
-        {card.frontContent}
-        <FlipButton onClick={() => setFlipped(true)}>
+        <span data-test="flashcard-text">{card.frontContent}</span>
+        <FlipButton onClick={() => setFlipped(true)} data-test="turn-btn">
           <CgEditFlipV />
         </FlipButton>
       </>
@@ -72,9 +72,11 @@ export default function FrontFaceContent({
       color={cardColor}
       decorated={cardStatus !== status.NOT_ANSWERED}
     >
-      <span>{`Pergunta ${index + 1}`}</span>
+      <span data-test="flashcard-text">{`Pergunta ${index + 1}`}</span>
       {cardStatus === status.NOT_ANSWERED ? (
-        <Button onClick={() => setStarted(!started)}>{cardIcon}</Button>
+        <Button onClick={() => setStarted(!started)} data-test="play-btn">
+          {cardIcon}
+        </Button>
       ) : (
         cardIcon
       )}

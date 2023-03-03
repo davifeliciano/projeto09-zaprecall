@@ -79,7 +79,7 @@ export default function Card({
   }
 
   return (
-    <StyledCard>
+    <StyledCard data-test="flashcard">
       <CardContent started={started} flipped={flipped}>
         <FrontFace started={started}>
           <FrontFaceContent
@@ -92,23 +92,26 @@ export default function Card({
           />
         </FrontFace>
         <BackFace started={started}>
-          {card.backContent}
+          <span data-test="flashcard-text">{card.backContent}</span>
           <StatusButtonsGrid>
             <StatusButton
               color={color.NO_RECALL}
               onClick={() => setCurrentCardStatus(status.NO_RECALL)}
+              data-test="no-btn"
             >
               Não lembrei
             </StatusButton>
             <StatusButton
               color={color.SOME_RECALL}
               onClick={() => setCurrentCardStatus(status.SOME_RECALL)}
+              data-test="partial-btn"
             >
               Quase não lembrei
             </StatusButton>
             <StatusButton
               color={color.FULL_RECALL}
               onClick={() => setCurrentCardStatus(status.FULL_RECALL)}
+              data-test="zap-btn"
             >
               Zap!
             </StatusButton>
