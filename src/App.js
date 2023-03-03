@@ -73,6 +73,10 @@ const GlobalStyle = createGlobalStyle`
     font-family: 'Recursive', sans-serif;
     background-color: #fb6b6b;
     color: #333333;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 

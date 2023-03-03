@@ -6,9 +6,11 @@ import FrontFaceContent from "./FrontFaceContent";
 
 const StyledCard = styled.div`
   width: 100%;
+  min-width: 32rem;
   max-width: 40rem;
   perspective: 50cm;
   background-color: transparent;
+  filter: drop-shadow(0 4px 5px rgba(0, 0, 0, 0.15));
   transition: all 500ms ease;
 `;
 

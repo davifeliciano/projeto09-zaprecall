@@ -17,6 +17,7 @@ const Container = styled.div`
   display: ${(props) => (props.started ? "flex" : "none")};
   flex-direction: column;
   width: 100vw;
+  min-width: 33rem;
   height: 100svh;
 `;
 

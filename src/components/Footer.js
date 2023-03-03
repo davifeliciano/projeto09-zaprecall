@@ -18,6 +18,7 @@ const StyledFooter = styled.footer`
   background-color: white;
   font-size: 1.8rem;
   text-align: center;
+  filter: drop-shadow(0 -4px 5px rgba(0, 0, 0, 0.15));
 
   animation-name: ${slideIn};
   animation-duration: 500ms;

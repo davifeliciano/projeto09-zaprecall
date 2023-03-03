@@ -13,11 +13,16 @@ const CardHeading = styled.div`
   font-weight: 700;
   color: ${(props) => props.color};
   text-decoration: ${(props) => props.decorated && "line-through"};
+
+  & > svg {
+    width: 3rem;
+    height: 2rem;
+  }
 `;
 
 const Button = styled.button`
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
   padding: 0;
   border: none;
   background-color: transparent;
