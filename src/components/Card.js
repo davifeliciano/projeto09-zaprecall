@@ -15,7 +15,6 @@ const StyledCard = styled.div`
 `;
 
 const CardContent = styled.div`
-  width: 100%;
   height: ${(props) => (props.started ? "16rem" : "6.5rem")};
   transform-style: preserve-3d;
   transform: ${(props) => props.flipped && "rotateX(180deg)"};
@@ -33,7 +32,6 @@ const CardFace = styled.div`
   position: absolute;
   backface-visibility: hidden;
   transform-origin: center;
-  transition: all 500ms ease;
 `;
 
 const FrontFace = CardFace;
@@ -48,13 +46,10 @@ const StatusButtonsGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 8px;
-  width: 100%;
   height: 3.7rem;
 `;
 
 const StatusButton = styled.button`
-  width: 100%;
-  height: 100%;
   padding-inline: 1rem;
   border: none;
   border-radius: 5px;
