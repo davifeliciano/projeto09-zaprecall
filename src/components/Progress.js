@@ -1,10 +1,6 @@
 import styled from "styled-components";
-import {
-  BsFillCheckCircleFill,
-  BsFillQuestionCircleFill,
-  BsFillXCircleFill,
-} from "react-icons/bs";
-import color from "../constants/colorsEnum";
+import status from "../constants/cardStatusEnum";
+import icon from "../constants/iconsEnum ";
 
 const Container = styled.div`
   text-transform: uppercase;
@@ -22,14 +18,17 @@ const ProgressIcons = styled.div`
   }
 `;
 
-export default function Progress() {
+export default function Progress({ cardsStatuses, answeredCardsStatuses }) {
   return (
     <Container>
-      4/4 Concluídos
+      {`${answeredCardsStatuses.length}/${cardsStatuses.length} Concluídos`}
       <ProgressIcons>
-        <BsFillCheckCircleFill color={color.FULL_RECALL} />
-        <BsFillQuestionCircleFill color={color.SOME_RECALL} />
-        <BsFillXCircleFill color={color.NO_RECALL} />
+        {answeredCardsStatuses.map((cardStatus) => {
+          const cardIconKey = Object.keys(status).find(
+            (key) => status[key] === cardStatus
+          );
+          return icon[cardIconKey];
+        })}
       </ProgressIcons>
     </Container>
   );

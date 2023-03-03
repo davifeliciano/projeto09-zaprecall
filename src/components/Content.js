@@ -62,7 +62,10 @@ export default function Content({ started }) {
           />
         ))}
       </CardsContainer>
-      <Footer />
+      <Footer
+        cardsStatuses={cardsStatuses}
+        answeredCardsStatuses={answeredCardsStatuses}
+      />
     </Container>
   );
 }

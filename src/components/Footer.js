@@ -25,11 +25,14 @@ const StyledFooter = styled.footer`
   animation-fill-mode: forwards;
 `;
 
-export default function Footer({ started }) {
+export default function Footer({ cardsStatuses, answeredCardsStatuses }) {
   return (
-    <StyledFooter started={started}>
-      <Result />
-      <Progress />
+    <StyledFooter>
+      <Result cardsStatuses={cardsStatuses} />
+      <Progress
+        cardsStatuses={cardsStatuses}
+        answeredCardsStatuses={answeredCardsStatuses}
+      />
     </StyledFooter>
   );
 }
