@@ -17,18 +17,6 @@ const fadeIn = keyframes`
   }
 `;
 
-const fadeOut = keyframes`
-  from {
-    opacity: unset;
-    transform: translate(-50%, -50%);
-  }
-
-  to {
-    opacity: 0;
-    transform: translate(-50%, -60%);
-  }
-`;
-
 const Container = styled.div`
   display: ${(props) => (props.started ? "none" : "flex")};
   flex-direction: column;
@@ -38,7 +26,7 @@ const Container = styled.div`
   top: 50%;
   left: 50%;
 
-  animation-name: ${(props) => (props.visible ? fadeIn : fadeOut)};
+  animation-name: ${fadeIn};
   animation-duration: ${`${fadeDurationInMs}ms`};
   animation-timing-function: ease;
   animation-fill-mode: forwards;
@@ -69,7 +57,7 @@ export default function StartScreen({ started, setStarted }) {
 
   function startRecall() {
     setVisible(false);
-    setTimeout(() => setStarted(true), fadeDurationInMs);
+    setStarted(true);
   }
 
   return (
